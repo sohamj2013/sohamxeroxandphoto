@@ -1,0 +1,313 @@
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soham Xerox and Photo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="brand">
+            <div class="logo">SX</div>
+            <div class="brand-name">
+                <h2>Soham Xerox</h2>
+                <p>AND PHOTO</p>
+            </div>
+        </div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#loginSection">Owner Login</a>
+            <a href="#dashboard" id="dashboardNav" hidden>Dashboard</a>
+        </nav>
+    </header>
+
+    <!-- HOME -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <span class="tag">YOUR TRUSTED XEROX & PRINTING CENTRE</span>
+
+            <h1>
+                Welcome to <br>
+                <span>Soham Xerox and Photo</span>
+            </h1>
+
+            <p>
+                Your trusted destination for Xerox, photocopy,
+                photo printing, document printing, scanning,
+                PDF editing and school-related digital services.
+                Quality work and reliable service, all in one place.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#services" class="primary-btn">Explore Services →</a>
+                <a href="#about" class="secondary-btn">Know More</a>
+            </div>
+        </div>
+
+        <div class="hero-visual">
+            <div class="visual-card">
+                <div class="visual-icon">SX</div>
+                <h2>Quality Printing.</h2>
+                <h2 class="blue-text">Reliable Service.</h2>
+                <p>Xerox • Photography • Documents • School Services</p>
+                <div class="visual-line"></div>
+                <div class="visual-bottom">
+                    <span>QUALITY</span>
+                    <span>TRUST</span>
+                    <span>SUPPORT</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about" id="about">
+        <div class="section-heading">
+            <span>ABOUT OUR BUSINESS</span>
+            <h2>Making everyday work easier.</h2>
+        </div>
+
+        <p class="about-description">
+            Soham Xerox and Photo provides reliable Xerox,
+            photocopy, photo printing, document printing,
+            scanning and document formatting services.
+
+            We also assist teachers, students and schools
+            with school-related digital work, including
+            platforms such as UDISE+ and SARAL.
+
+            Our aim is to provide convenient, quality
+            and dependable services in one place.
+        </p>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="services" id="services">
+        <div class="section-heading">
+            <span>WHAT WE OFFER</span>
+            <h2>Our Services</h2>
+            <p>Quality services for students, teachers, schools and everyone.</p>
+        </div>
+
+        <div class="service-grid">
+
+            <div class="service-card">
+                <div class="service-icon">▤</div>
+                <h3>Xerox & Photocopy</h3>
+                <p>Black and white and colour photocopy services.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">▣</div>
+                <h3>Photo Printing</h3>
+                <p>Quality photo printing for different needs.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">▧</div>
+                <h3>Document Printing</h3>
+                <p>Fast and convenient document printing services.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">⌨</div>
+                <h3>School-related Work</h3>
+                <p>Assistance with UDISE+, SARAL and other school-related tasks.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">PDF</div>
+                <h3>PDF & Document Services</h3>
+                <p>PDF editing, formatting and document conversion.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">▣</div>
+                <h3>Scanning Services</h3>
+                <p>Document scanning and digital file preparation.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- OWNER LOGIN -->
+    <section id="loginSection" class="login-section">
+        <div class="login-card">
+
+            <div class="logo">SX</div>
+
+            <h2>Owner Login</h2>
+            <p>Sign in to manage your business.</p>
+
+            <form id="loginForm">
+
+                <input
+                    type="email"
+                    id="ownerEmail"
+                    placeholder="Owner Email"
+                    autocomplete="username"
+                    required
+                >
+
+                <input
+                    type="password"
+                    id="ownerPassword"
+                    placeholder="Password"
+                    autocomplete="current-password"
+                    required
+                >
+
+                <button type="submit">Login to Dashboard</button>
+
+                <p id="loginMessage" role="status"></p>
+
+            </form>
+        </div>
+    </section>
+
+    <!-- DASHBOARD -->
+    <section id="dashboard" class="dashboard" hidden>
+
+        <div class="dashboard-heading">
+            <h2>Business Dashboard</h2>
+            <p>Manage customers, work records and payments.</p>
+            <button type="button" id="logoutButton">Logout</button>
+        </div>
+
+        <!-- SUMMARY -->
+        <div class="stats-container">
+
+            <div class="stat-card">
+                <h3>Total Customers</h3>
+                <p id="totalCustomers">0</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>Total Work Entries</h3>
+                <p id="totalWorks">0</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>Pending Payments</h3>
+                <p id="pendingPayments">₹0</p>
+            </div>
+
+        </div>
+
+        <!-- ADD CUSTOMER -->
+        <div class="dashboard-panel">
+            <h3>Add New Customer</h3>
+
+            <form id="customerForm" class="dashboard-form">
+
+                <input type="text" id="customerName"
+                    placeholder="Customer Name" required>
+
+                <input type="tel" id="customerPhone"
+                    placeholder="Phone Number" required>
+
+                <button type="submit">Add Customer</button>
+
+            </form>
+        </div>
+
+        <!-- ADD WORK -->
+        <div class="dashboard-panel">
+            <h3>Add New Work</h3>
+
+            <form id="workForm" class="dashboard-form">
+
+                <label for="workCustomer">Select Customer</label>
+                <select id="workCustomer" required>
+                    <option value="">Select Customer</option>
+                </select>
+
+                <input type="text" id="workName"
+                    placeholder="Work / Service Name" required>
+
+                <label for="billingDate">Billing Date</label>
+                <input type="date" id="billingDate" required>
+
+                <input type="number" id="totalAmount"
+                    placeholder="Total Amount (₹)"
+                    min="0" step="0.01" required>
+
+                <input type="number" id="receivedAmount"
+                    placeholder="Amount Received (₹)"
+                    min="0" step="0.01" value="0" required>
+
+                <label for="workStatus">Work Status</label>
+
+                <select id="workStatus" required>
+                    <option value="Pending">Pending</option>
+                    <option value="In Progress">In Progress</option>
+                    <option value="Done">Done</option>
+                </select>
+
+                <button type="submit">Save Work</button>
+
+            </form>
+        </div>
+
+        <!-- RECORDS -->
+        <div class="dashboard-panel">
+            <h3>Customer Work Records</h3>
+
+            <div class="table-wrapper">
+                <table class="records-table">
+
+                    <thead>
+                        <tr>
+                            <th>Customer</th>
+                            <th>Phone No.</th>
+                            <th>Date</th>
+                            <th>Work</th>
+                            <th>Total</th>
+                            <th>Received</th>
+                            <th>Remaining</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="recordsTable">
+                        <tr>
+                            <td colspan="9">No records yet.</td>
+                        </tr>
+                    </tbody>
+
+                </table>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-brand">
+            <div class="logo">SX</div>
+            <h3>Soham Xerox and Photo</h3>
+        </div>
+
+        <p>Printing, photography and document services.</p>
+
+        <div class="copyright">
+            © 2026 Soham Xerox and Photo. All rights reserved.
+        </div>
+    </footer>
+
+    <!-- SCRIPTS: KEEP THIS ORDER -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="supabase-config.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
